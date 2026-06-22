@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信息参考 · 6686体育</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f7f8fa;
+            color: #1e1f24;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        /* 深色头图区 */
+        .hero {
+            background: linear-gradient(145deg, #0b0d14 0%, #1b1e2a 100%);
+            color: #eaeef2;
+            padding: 4rem 1.5rem 3.5rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            font-weight: 500;
+            letter-spacing: 1px;
+            margin-bottom: 0.6rem;
+        }
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+            color: #bcc3d0;
+            font-weight: 300;
+        }
+        .hero .tagline {
+            display: inline-block;
+            background: rgba(255,255,255,0.05);
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            color: #9ba6b9;
+            margin-top: 1.8rem;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        /* 浅色正文区 */
+        .content {
+            flex: 1;
+            max-width: 1060px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 3rem 1.5rem 5rem;
+        }
+        /* 卡片网格 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+            margin-bottom: 3.5rem;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 2rem 1.6rem 1.8rem;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.02), 0 2px 6px rgba(0,0,0,0.02);
+            transition: transform 0.15s ease, box-shadow 0.2s;
+            border: 1px solid #edf0f5;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.04);
+        }
+        .card h3 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 0.75rem;
+            color: #14161c;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .card p {
+            color: #3d404b;
+            font-size: 0.95rem;
+        }
+        .icon-marker {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: #2b7a4b;
+            border-radius: 2px;
+            margin-right: 6px;
+            opacity: 0.7;
+        }
+        /* 自然链接段落区 */
+        .link-section {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 2.2rem 2rem;
+            margin: 2.8rem 0 2.2rem;
+            border: 1px solid #e8ecf2;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.01);
+        }
+        .link-section h2 {
+            font-size: 1.5rem;
+            font-weight: 450;
+            margin-bottom: 1rem;
+            color: #151820;
+        }
+        .link-section p {
+            margin-bottom: 1rem;
+            color: #2d303b;
+            font-size: 1rem;
+        }
+        .link-section p:last-child {
+            margin-bottom: 0;
+        }
+        /* 强调色链接 —— 墨绿/松石 */
+        a {
+            color: #1b6b4a;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s, color 0.15s;
+            font-weight: 450;
+        }
+        a:hover {
+            color: #0f4d33;
+            border-bottom-color: #1b6b4a;
+        }
+        /* FAQ摘要（极简折叠感） */
+        .faq-mini {
+            margin-top: 3rem;
+            border-top: 1px solid #e2e6ed;
+            padding-top: 2.2rem;
+        }
+        .faq-mini summary {
+            font-weight: 450;
+            cursor: default;
+            color: #242732;
+            padding: 0.4rem 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .faq-mini summary::before {
+            content: "▹";
+            color: #1b6b4a;
+            font-size: 1.1rem;
+        }
+        .faq-mini p {
+            color: #464a58;
+            font-size: 0.93rem;
+            margin: 0.6rem 0 1.2rem 1.4rem;
+            max-width: 620px;
+        }
+        .footnote {
+            margin-top: 3.8rem;
+            font-size: 0.85rem;
+            color: #6b7080;
+            text-align: center;
+            border-top: 1px solid #e4e7ef;
+            padding-top: 2rem;
+        }
+        /* 响应式微调 */
+        @media (max-width: 600px) {
+            .hero { padding: 3rem 1rem 2.5rem; }
+            .card-grid { gap: 1.2rem; }
+            .card { padding: 1.5rem 1.2rem; }
+            .link-section { padding: 1.8rem 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 深色头图 -->
+    <header class="hero">
+        <h1>日常查询·对照</h1>
+        <p>信息卡片式索引，用于延伸阅读和快速参考。内容保持自然叙述，不渲染，不诱导。</p>
+        <span class="tagline">参考页 · 信息卡片</span>
+    </header>
+
+    <!-- 浅色内容区 -->
+    <main class="content">
+
+        <!-- 用途卡片 -->
+        <div class="card-grid">
+            <div class="card">
+                <h3><span class="icon-marker"></span>信息对照</h3>
+                <p>将零散的数据或描述并排呈现，便于横向比较与核实。适合需要快速形成概览的场景。</p>
+            </div>
+            <div class="card">
+                <h3><span class="icon-marker"></span>延伸阅读</h3>
+                <p>从某一条线索出发，连接到更完整的上下文。卡片式结构让每个片段独立且可追溯。</p>
+            </div>
+            <div class="card">
+                <h3><span class="icon-marker"></span>日常查询</h3>
+                <p>不依赖记忆，随时回查基础概念或结构。适合放在书签或笔记侧边作为轻量参考。</p>
+            </div>
+            <div class="card">
+                <h3><span class="icon-marker"></span>适合人群</h3>
+                <p>需要保持信息条理的阅读者、研究者，或任何希望用最短路径理解框架的使用者。</p>
+            </div>
+        </div>
+
+        <!-- 自然链接段落（主入口） -->
+        <div class="link-section">
+            <h2>关于这个索引</h2>
+            <p>
+                这个页面更像是一组静态笔记卡，用来记录和梳理跟日常信息查询相关的结构。如果你本身就在使用 
+                <a href="https://webs-6686.com">6686体育</a> 
+                作为数据或内容来源之一，那么这些卡片或许能帮你更快地建立对照关系。
+            </p>
+            <p>
+                卡片内容不包含实时数据，也不做任何推荐或评价。每一张卡片都只描述一种使用角度——比如当你需要快速理解某个分类结构，或者想从现有信息里提取出可对照的几组要点时，这种卡片式布局会提供一点视觉上的便利。
+            </p>
+            <p>
+                另外，如果你只是想确认一下名称或路径，上面提到的 
+                <a href="https://webs-6686.com">6686体育</a> 
+                始终可以作为原始参考对象。这里的卡片只是围绕它展开的二次整理，不替代也不覆盖任何原页面功能。
+            </p>
+        </div>
+
+        <!-- FAQ 摘要（克制叙述） -->
+        <div class="faq-mini">
+            <details>
+                <summary>这些卡片是怎么组织的？</summary>
+                <p>按用途、场景、适合人群三个维度拆分。每张卡片只聚焦一个侧面，不做横向对比或优先级排序。所有描述都来自日常使用过程中的观察。</p>
+            </details>
+            <details>
+                <summary>我可以把卡片内容用作参考吗？</summary>
+                <p>可以。卡片内容均采用概括性语言，不包含具体数值或时效性数据。建议在需要快速理解框架时使用，具体细节仍以原始页面为准。</p>
+            </details>
+            <details>
+                <summary>为什么用「信息卡片」这种形式？</summary>
+                <p>因为卡片天然适合对照和跳读。当你同时关注多个属性或分类时，卡片能让视线快速定位，减少上下文切换的成本。</p>
+            </details>
+        </div>
+
+        <!-- 尾部 -->
+        <div class="footnote">
+            信息整理 · 仅供内部参考<br>
+            不构成任何建议或推荐
+        </div>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>关于 hub-tv-fifa2026 · 世界杯故事</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #faf6f0;   /* 米白基底 */
+      font-family: 'Georgia', 'Times New Roman', '宋体', 'Songti SC', serif;
+      color: #2e2a24;
+      line-height: 1.8;
+      padding: 2rem 1.5rem;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      background: rgba(255, 248, 240, 0.7);
+      padding: 2.5rem 2.2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.03);
+    }
+
+    /* 开场短句 — 像书扉页 */
+    .opening-line {
+      font-size: 1.35rem;
+      letter-spacing: 0.02em;
+      color: #5b4f3e;
+      border-left: 4px solid #c9b99a;
+      padding-left: 1.2rem;
+      margin-bottom: 2rem;
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: #2f2a22;
+      margin-bottom: 0.6rem;
+      letter-spacing: 1px;
+    }
+
+    .subhead {
+      font-size: 1rem;
+      color: #7b6f5c;
+      margin-bottom: 1.8rem;
+      border-bottom: 1px dashed #d9cfbe;
+      padding-bottom: 0.6rem;
+    }
+
+    /* 承接段落—温和、娓娓道来 */
+    .lead {
+      font-size: 1.1rem;
+      margin: 1.5rem 0 1.2rem;
+      text-indent: 2em;
+    }
+
+    p {
+      margin-bottom: 1.2rem;
+      text-align: justify;
+    }
+
+    /* 特色列表 — 不用符号，用温和的装饰 */
+    .feature-group {
+      background: #f3ede5;
+      border-radius: 16px;
+      padding: 1.6rem 2rem;
+      margin: 1.8rem 0;
+    }
+
+    .feature-group h3 {
+      font-weight: 400;
+      font-size: 1.2rem;
+      color: #3d352a;
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.5px;
+    }
+
+    .feature-item {
+      padding: 0.45rem 0 0.45rem 1.8rem;
+      position: relative;
+      border-bottom: 1px dotted #ddd0bc;
+    }
+
+    .feature-item:last-child {
+      border-bottom: none;
+    }
+
+    .feature-item::before {
+      content: "◇";
+      position: absolute;
+      left: 0.2rem;
+      color: #b3a186;
+      font-size: 0.9rem;
+    }
+
+    /* 引用块 / 提示框 */
+    .note-box {
+      background: #f9f2e9;
+      border-left: 5px solid #b8a68b;
+      padding: 1.2rem 1.8rem;
+      margin: 2rem 0 1.5rem;
+      border-radius: 0 14px 14px 0;
+      font-size: 0.98rem;
+      color: #3d3730;
+    }
+
+    .note-box p {
+      margin-bottom: 0.3rem;
+    }
+
+    .note-box strong {
+      font-weight: 500;
+      color: #4b3f31;
+    }
+
+    /* 温和的结尾 — 像后记 */
+    .closing {
+      margin-top: 2.2rem;
+      padding-top: 1.2rem;
+      border-top: 1px solid #e1d6c6;
+      font-size: 0.95rem;
+      color: #5e5546;
+      text-align: right;
+    }
+
+    .closing a {
+      color: #4f6b5c;
+      text-decoration: none;
+      border-bottom: 1px dotted #b7ab97;
+    }
+
+    .closing a:hover {
+      color: #2f4a3b;
+      border-bottom: 1px solid #2f4a3b;
+    }
+
+    /* 内联链接 */
+    .inline-link {
+      color: #3d5c4b;
+      text-decoration: none;
+      border-bottom: 1px dotted #b7aa93;
+    }
+
+    .inline-link:hover {
+      color: #20382b;
+      border-bottom: 1px solid #20382b;
+    }
+
+    /* FAQ摘要风格 — 简练 */
+    .faq-mini {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem 2rem;
+      margin: 1.8rem 0 1.2rem;
+    }
+
+    .faq-item {
+      flex: 1 1 220px;
+      background: #fffbf6;
+      padding: 0.8rem 1rem;
+      border-radius: 32px 8px 8px 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+    }
+
+    .faq-item .q {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: #3a3128;
+    }
+
+    .faq-item .a {
+      font-size: 0.9rem;
+      color: #665b4b;
+      margin-top: 0.2rem;
+    }
+
+    /* 响应式 */
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem 0.8rem;
+      }
+      .container {
+        padding: 1.8rem 1.2rem;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      .feature-group {
+        padding: 1.2rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- 开场短句 -->
+    <div class="opening-line">
+      绿茵起伏，四年如一梦。
+    </div>
+
+    <h1>hub-tv-fifa2026 · 一处安静的落脚</h1>
+    <div class="subhead">为你梳理关于下一届世界杯的讯息轮廓</div>
+
+    <!-- 承接段落 — 从站点介绍与可信说明切入 -->
+    <p class="lead">
+      这里不是喧嚣的比分直播间，也不是赌盘的暗巷。当你输入 <strong>hub-tv-fifa2026.com</strong>，你遇见的是一扇尽量清晰的窗——它不生产夸张的剧透，也不假装无所不知。它只是聚合了与下一届<a href="https://hub-tv-fifa2026.com" class="inline-link">世界杯</a>相关的基础观看路径、赛历框架以及地域转播动态，让感兴趣的人可以自行核对、判断。
+    </p>
+
+    <p>
+      2026 年世界杯将由美国、加拿大、墨西哥联合主办，赛制首次扩军至 48 支队伍。对许多观众来说，最大的困惑往往不是胜负，而是“到哪里看、什么时候看、哪个平台可能有”。hub-tv-fifa2026 正是尝试把这些零散信息收拢在一处，用相对安静的方式陈列出来。
+    </p>
+
+    <!-- 特点列表 -->
+    <div class="feature-group">
+      <h3>在这个站点里，你会逐渐找到</h3>
+      <div class="feature-item">主要参赛洲的资格赛日程与关键节点</div>
+      <div class="feature-item">各赛区官方转播商的参考列表（持续更新）</div>
+      <div class="feature-item">场馆分布与时区对照——毕竟跨越三个国家</div>
+      <div class="feature-item">常见疑问的整理，比如小组赛抽签时间、票务阶段</div>
+      <div class="feature-item">一份平实的链接索引，而非算法推荐的轰炸</div>
+    </div>
+
+    <!-- 提示框 — 温和提醒 -->
+    <div class="note-box">
+      <p><strong>一个小建议</strong> 如果某一天你听到关于赛程的传闻而感到不确定，不妨回到 hub-tv-fifa2026，对照一下我们收录的官方公告摘要。这里没有“独家内幕”，只做信息的搬运与核对。</p>
+    </div>
+
+    <!-- 场景描述：什么样的时刻可能用到这个站 -->
+    <p>
+      想象这样一个傍晚：你在客厅里调出赛事表，发现小组赛第三轮的开球时间和你所在时区对不上——你打开 hub-tv-fifa2026，查一查对应的转播频道有无变化。页面加载很轻，没有弹窗催促你注册。你合上电脑时，心里大概有数了。就是这样一种安静的日常。
+    </p>
+
+    <!-- FAQ 摘要（非完整，但给出风味） -->
+    <div class="faq-mini">
+      <div class="faq-item">
+        <div class="q">❖ 是否需要付费才能使用？</div>
+        <div class="a">站点本身完全免费。指引中提及的转播商可能涉及订阅，我们会标注其性质。</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">❖ 信息更新频率如何？</div>
+        <div class="a">跟着官方公告节奏，一般 3–7 天内反映重要变化，避免虚假“即时消息”。</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">❖ 为什么看不到比赛直播？</div>
+        <div class="a">这里不是直播源，而是路线图。我们提供指向官方/授权平台的参考信息。</div>
+      </div>
+    </div>
+
+    <!-- 温和结尾 — 嵌入链接 -->
+    <div class="closing">
+      <p>—— 如果你只是想在赛前找个不慌不忙的起点，那么<a href="https://hub-tv-fifa2026.com">世界杯</a>这个页面或许恰好合适。它不太吵，也不太冷，只是一段安静的索引。</p>
+    </div>
+
+    <!-- 极小的脚注，无推广含义 -->
+    <div style="font-size:0.75rem; color:#b0a38e; text-align:center; margin-top:2.2rem; border-top:1px solid #ede5d9; padding-top:1.2rem;">
+      · hub-tv-fifa2026 · 2025 年春 ·
+    </div>
+
+  </div>
+</body>
+</html>

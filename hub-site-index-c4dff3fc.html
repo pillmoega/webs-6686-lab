@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>资料整理 · 世界杯信息索引</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.7;
+      color: #1e1e1e;
+      background-color: #f8f6f2;
+    }
+
+    /* ——— 深色头图 ——— */
+    .hero {
+      background: linear-gradient(145deg, #0b141a 0%, #1c2c36 100%);
+      color: #eaeef1;
+      padding: 5rem 2rem 4.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: -40%;
+      left: -20%;
+      width: 240px;
+      height: 240px;
+      background: rgba(207, 179, 128, 0.04);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      bottom: -20%;
+      right: -10%;
+      width: 300px;
+      height: 300px;
+      background: rgba(230, 200, 140, 0.03);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      margin-bottom: 0.6rem;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .hero .lead {
+      font-size: 1.15rem;
+      max-width: 680px;
+      margin: 0 auto;
+      color: #c8d6db;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    /* ——— 正文区 浅色 ——— */
+    .content-wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 2.8rem 1.8rem 4rem;
+    }
+
+    .intro {
+      font-size: 1.08rem;
+      margin-bottom: 2.6rem;
+      padding: 1.4rem 1.6rem;
+      background: #ffffffd9;
+      border-left: 4px solid #b28b5c;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .intro p {
+      margin-bottom: 0.5rem;
+    }
+
+    .intro p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* ——— 特点卡片组 ——— */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.8rem;
+      margin: 2.8rem 0 2.2rem;
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.6rem 1.4rem 1.8rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0,0,0,0.02);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: 1px solid #eae5db;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.08);
+      border-color: #d6cdbc;
+    }
+
+    .feature-card h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: #1f2b33;
+      letter-spacing: 0.3px;
+    }
+
+    .feature-card p {
+      font-size: 0.95rem;
+      color: #3d4a52;
+      line-height: 1.6;
+    }
+
+    /* ——— 强调色链接 ——— */
+    a {
+      color: #8a6f44;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-bottom 0.15s, color 0.15s;
+    }
+
+    a:hover,
+    a:focus {
+      color: #5d4a2c;
+      border-bottom: 1px solid #b28b5c;
+    }
+
+    .hero a {
+      color: #dcc9a0;
+      border-bottom: 1px solid rgba(220, 201, 160, 0.2);
+    }
+
+    .hero a:hover {
+      color: #f0e1b6;
+      border-bottom: 1px solid #dcc9a0;
+    }
+
+    /* ——— 温和结尾区 ——— */
+    .gentle-closing {
+      margin-top: 3.2rem;
+      padding: 1.8rem 0 1.4rem;
+      border-top: 1px solid #ded7cb;
+      text-align: center;
+      color: #4c5b61;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .gentle-closing p {
+      margin-bottom: 0.2rem;
+    }
+
+    .gentle-closing .tagline {
+      font-size: 1rem;
+      letter-spacing: 0.2px;
+      color: #3c4b50;
+    }
+
+    /* ——— 响应式 ——— */
+    @media (max-width: 640px) {
+      .hero {
+        padding: 3.2rem 1.2rem 3rem;
+      }
+      .hero h1 {
+        font-size: 1.9rem;
+      }
+      .hero .lead {
+        font-size: 1rem;
+      }
+      .content-wrap {
+        padding: 1.8rem 1rem 2.8rem;
+      }
+      .intro {
+        padding: 1rem 1.2rem;
+        font-size: 1rem;
+      }
+      .feature-grid {
+        gap: 1.2rem;
+      }
+      .feature-card {
+        padding: 1.2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 深色头图 -->
+  <section class="hero">
+    <h1>资料整理 · 世界杯信息索引</h1>
+    <p class="lead">
+      从历届记录到最新动态，这里只做一件事：让寻找 <a href="https://hub-site-fifa2026.com">世界杯</a> 相关信息变得更顺手。
+    </p>
+  </section>
+
+  <!-- 浅色正文区 -->
+  <main class="content-wrap">
+
+    <!-- 承接段落：故事开场 -->
+    <div class="intro">
+      <p>说起 <strong>世界杯</strong>，每个人的记忆里可能都藏着几帧画面——某次绝杀、某场爆冷、又或者只是某个夏夜和朋友们围在屏幕前。但如果你想从海量的报道、数据、日程里理出一条线索，就会发现信息散落各处，像没有目录的旧杂志。</p>
+      <p>我整理这个索引的初衷很简单：把零散的内容按主题归拢，让需要的人不必在标签页间反复切换。不是门户，不是新闻站，更像一个安静的图书馆角落。</p>
+    </div>
+
+    <!-- 特点列表：信息索引的几个方向 -->
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>📂 赛事档案</h3>
+        <p>历届世界杯的举办地、冠军、最佳射手、经典比赛回顾。从乌拉圭1930到卡塔尔2022，方便横向对比或快速回溯。</p>
+      </div>
+      <div class="feature-card">
+        <h3>🗓️ 日程·分组</h3>
+        <p>预选赛阶段、抽签结果、小组赛对阵及淘汰赛树状图。不追即时比分，但保留权威来源的跳转指引。</p>
+      </div>
+      <div class="feature-card">
+        <h3>🏟️ 场馆与城市</h3>
+        <p>每届主办城市、体育场容量、设计亮点及承办比赛列表。适合做观赛计划或背景了解。</p>
+      </div>
+    </div>
+
+    <!-- 补充一段生活化场景，保持正式质感 -->
+    <p style="margin: 1.2rem 0 0.8rem; font-size: 0.98rem; color: #3f4e57;">
+      比如你正在计划下一次的观赛旅程，或者只是想搞清楚某年某场比赛到底是谁进的球——这个索引的目的就是让你少翻几页。所有的链接都经过筛选，指向更具体的专题或官方记录。
+    </p>
+
+    <!-- 温和结尾 -->
+    <div class="gentle-closing">
+      <p class="tagline">慢慢看，不着急。</p>
+      <p>希望这个资料页能帮你省下一点时间，把精力留给球赛本身。</p>
+      <p style="font-size: 0.88rem; color: #6a7a80; margin-top: 0.4rem;">
+        如需深入了解，可随时移步至 <a href="https://hub-site-fifa2026.com">世界杯</a> 索引主页。
+      </p>
+    </div>
+
+  </main>
+
+</body>
+</html>
